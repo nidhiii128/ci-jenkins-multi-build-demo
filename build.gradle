@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.vit.demo'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.vit.demo.App'
+        )
+    }
+}
